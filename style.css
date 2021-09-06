@@ -26,7 +26,7 @@ img {
   --hue: 240;
   /* HSL color mode */
   --base-color: hsl(var(--hue) 100% 30%);
-  --base-color-second: hsl(var(--hue) 96% 98%);
+  --base-color-second: hsl(var(--hue) 100% 25%);
   --base-color-alt: hsl(var(--hue) 57% 53%);
   --title-color: hsl(var(--hue) 41% 10%);
   --text-color: hsl(0 0% 46%);
@@ -118,6 +118,9 @@ body {
 
 .section header {
   margin-bottom: 4rem;
+}
+.section strong {
+  color: var(--base-color);
 }
 .section header strong {
   color: var(--base-color);
@@ -406,13 +409,34 @@ nav.show .icon-close {
   margin-right: 0.5rem;
 }
 
-/* Swiper */
-.swiper-slide {
-  height: auto;
-  padding: 4rem 1rem;
-}
+/* swiper */
+
 .swiper-pagination-bullet-active {
   background: var(--base-color);
+}
+
+/*----Carrosel Smart-----*/
+.blabla {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.calcchi-image {
+  margin: auto;
+}
+
+.swiper-slide {
+  height: auto;
+  padding: 4rem 0.4rem;
+}
+
+.swiper-pagination-bullet {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.swiper {
+  overflow: hidden;
 }
 
 /* Contacte */
@@ -519,6 +543,42 @@ footer .social a:hover {
   .button {
     height: 3.5rem;
   }
+
+  label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 52px;
+    height: 27px;
+    background: var(--base-color);
+    float: right;
+    border-radius: 100px;
+    position: relative;
+  }
+
+  label::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 90px;
+    transition: 0.3s;
+  }
+
+  input:checked + label {
+    background-color: var(--color-headings);
+  }
+
+  input:checked + label::after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+  }
+
+  label:active:after {
+    width: 45px;
+  }
   /*Navigation*/
   nav .menu {
     opacity: 1;
@@ -566,6 +626,7 @@ footer .social a:hover {
     margin: 0 auto;
     grid-auto-flow: column;
   }
+
   /* Services */
   .cards {
     grid-template-columns: 1fr 1fr 1fr;

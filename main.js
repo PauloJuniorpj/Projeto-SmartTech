@@ -31,7 +31,7 @@ function changeHeaderWhenScroll() {
 }
 
 /*Testimonials carousel swiper */
-const swiper = new Swiper('.swiper-container', {
+const swiper = new Swiper('.swiper', {
   slidesPerView: 1,
   pagination: {
     el: '.swiper-pagination'
@@ -39,8 +39,12 @@ const swiper = new Swiper('.swiper-container', {
   mousewheel: true,
   keyboard: true,
   breakpoints: {
-    767: {
-      slidesPerView: 2,
+    650: {
+      slidesPerView: 1,
+      setWrapperSize: true
+    },
+    957: {
+      slidesPerView: 3,
       setWrapperSize: true
     }
   }
@@ -106,3 +110,5 @@ window.addEventListener('scroll', function () {
   backToTop()
   activateMenuAtCurrentSection()
 })
+
+/*Slider Show */
