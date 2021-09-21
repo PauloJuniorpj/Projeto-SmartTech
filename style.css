@@ -131,7 +131,7 @@ body {
   margin-bottom: 2rem;
   display: flex;
 
-  width: 100%;
+  width: 100vw;
   position: fixed;
   top: 0;
   left: 0;
@@ -409,19 +409,19 @@ nav.show .icon-close {
   margin-right: 0.5rem;
 }
 
-/* swiper */
-
-.swiper-pagination-bullet-active {
-  background: var(--base-color);
-}
-
 /*----Carrosel Smart-----*/
-.blabla {
+.Smart-Tech {
   margin-left: auto;
   margin-right: auto;
 }
+.smart-image img {
+  width: 100%;
+  height: auto;
+}
 
-.calcchi-image {
+.smart-image {
+  display: flex;
+  justify-content: center;
   margin: auto;
 }
 
@@ -462,6 +462,17 @@ nav.show .icon-close {
 }
 #contact ul li i {
   color: var(--base-color);
+}
+#contact ul li a {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  margin-right: 0.65rem;
+
+  color: var(--base-color);
+}
+#contact ul li a:hover {
+  transform: translateY(-5px);
 }
 
 /* Footer */
