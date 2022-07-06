@@ -219,7 +219,7 @@ nav.show .menu {
 
   position: fixed;
   top: 0;
-  left: -8rem;
+  left: -11rem;
 
   display: grid;
   place-content: center;
